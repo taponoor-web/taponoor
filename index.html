@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" - شركة تسويق إلكتروني بالكويت تقدم خدمات برمجة المواقع، تحسين محركات البحث SEO، إعلانات جوجل، إدارة حملات Google Ads، إعلانات فيسبوك وإنستجرام، وإدارة حسابات المشاهير">
-    <title> برمجة مواقع، إعلانات جوجل، وفيسبوك وإنستجرام في الكويت</title>
+    <meta name="description" content="تابو نور - شركة تسويق إلكتروني بالكويت تقدم خدمات برمجة المواقع، تحسين محركات البحث SEO، إعلانات جوجل، إدارة حملات Google Ads، إعلانات فيسبوك وإنستجرام، وإدارة حسابات المشاهير">
+    <title>تابو نور | برمجة مواقع، إعلانات جوجل، وفيسبوك وإنستجرام في الكويت</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -12,32 +12,28 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Tajawal', 'Arial', sans-serif;
+            font-family: 'Tajawal', sans-serif;
         }
         body {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            width: 100%;
+        /* الحاوية الرئيسية */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* القسم الرئيسي (الصفحة الرئيسية) */
+        .hero {
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         .logo {
             width: 150px;
@@ -56,7 +52,7 @@
             text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .highlight { color: #FFD700; font-weight: bold; }
-        p {
+        .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             line-height: 1.6;
@@ -79,6 +75,9 @@
             flex-direction: column;
             gap: 15px;
             margin-top: 20px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .btn {
             display: flex;
@@ -91,98 +90,118 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             color: white;
-            position: relative;
-            overflow: hidden;
+            gap: 10px;
         }
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.1);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-        .btn:hover::after { transform: translateX(0); }
-        .btn i {
-            margin-left: 10px;
-            font-size: 1.3rem;
-        }
-        .whatsapp { background-color: #25D366; }
-        .phone { background-color: #34B7F1; }
-        .instagram {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
-        }
-        .facebook { background-color: #1877F2; }
-        .email { background-color: #EA4335; }
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
+        .whatsapp { background-color: #25D366; }
+        .phone { background-color: #34B7F1; }
+        .instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); }
+        .facebook { background-color: #1877F2; }
+        .email { background-color: #EA4335; }
+        .blog-btn {
+            background-color: #FFD700;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        .blog-btn i { color: #1e3c72; }
+        
+        /* قسم التنقل بين الأقسام */
+        .nav-blog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 60px;
+        }
+        .nav-blog a {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .nav-blog a:hover {
+            background: #FFD700;
+            color: #1e3c72;
+        }
+        
+        /* قسم المدونة - كل مقال */
+        .blog-section {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: #333;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .blog-section h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-right: 5px solid #FFD700;
+            padding-right: 15px;
+        }
+        .blog-section h3 {
+            color: #2a5298;
+            margin: 20px 0 10px 0;
+        }
+        .blog-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .blog-section ul, .blog-section ol {
+            margin: 15px 0;
+            padding-right: 25px;
+        }
+        .blog-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .blog-meta {
+            color: #777;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
         .footer {
-            margin-top: 30px;
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
         }
-        .contact-info {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.8);
+        hr {
+            margin: 30px 0;
+            border-color: rgba(255,255,255,0.2);
         }
-        .phone-number { display: none; }
-        @media (max-width: 600px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 2rem; }
-            p { font-size: 1rem; }
-            .btn { padding: 12px 20px; font-size: 1rem; }
-            .services { gap: 10px; margin: 30px 0 20px 0; }
-            .service-badge { padding: 6px 12px; font-size: 0.8rem; }
+        @media (max-width: 700px) {
+            .hero { padding: 25px; }
+            h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .blog-section h2 { font-size: 1.4rem; }
+            .nav-blog a { padding: 5px 12px; font-size: 0.7rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="main-container">
+    
+    <!-- ================= القسم الرئيسي (الصفحة الرئيسية) ================= -->
+    <div class="hero">
         <img src="https://i.ibb.co/KxJ0KCZT/tapologo-1.png" alt="تابو نور" class="logo">
         <h1>Google Ads | <span class="highlight">برمجة الويب</span> و <span class="highlight">الـ SEO</span></h1>
         <p>نقدم خدمات برمجة مواقع احترافية، تحسين محركات البحث SEO، إدارة و تنفيذ حملات جوجل الإعلانية (Google Ads)، إعلانات فيسبوك، إعلانات إنستجرام، وتصميم استراتيجيات تسويقية للمؤثرين والمشاهير في الكويت.</p>
-
-        <div class="buttons">
-            <a href="tel:+96594728014" class="btn phone">
-                <span>الهاتف 1</span>
-                <i class="fas fa-phone"></i>
-                <span class="phone-number">94728014 (965+)</span>
-            </a>
-            <a href="tel:+96550553083" class="btn phone">
-                <span>الهاتف 2</span>
-                <i class="fas fa-phone"></i>
-                <span class="phone-number">50553083 (965+)</span>
-            </a>
-            <a href="https://wa.me/+96594728014" class="btn whatsapp">
-                <span>واتساب 1</span>
-                <i class="fab fa-whatsapp"></i>
-                <span class="phone-number">94728014 (965+)</span>
-            </a>
-            <a href="https://wa.me/+96550553083" class="btn whatsapp">
-                <span>واتساب 2</span>
-                <i class="fab fa-whatsapp"></i>
-                <span class="phone-number">50553083 (965+)</span>
-            </a>
-            <a href="https://www.instagram.com/line_marketng209" class="btn instagram">
-                <span>انستجرام</span>
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com/TABO" class="btn facebook">
-                <span>فيسبوك</span>
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="mailto:taponoor@gmail.com" class="btn email">
-                <span>البريد الإلكتروني</span>
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-
+        
         <div class="services">
             <div class="service-badge">تصميم مواقع</div>
             <div class="service-badge">تطوير ويب</div>
@@ -199,17 +218,213 @@
             <div class="service-badge">إدارة سوشيال ميديا</div>
         </div>
 
-        <div class="contact-info">
+        <div class="buttons">
+            <a href="tel:+96594728014" class="btn phone"><i class="fas fa-phone"></i> الهاتف 1: 94728014</a>
+            <a href="tel:+96550553083" class="btn phone"><i class="fas fa-phone"></i> الهاتف 2: 50553083</a>
+            <a href="https://wa.me/+96594728014" class="btn whatsapp"><i class="fab fa-whatsapp"></i> واتساب 1</a>
+            <a href="https://wa.me/+96550553083" class="btn whatsapp"><i class="fab fa-whatsapp"></i> واتساب 2</a>
+            <a href="https://www.instagram.com/line_marketng209" class="btn instagram"><i class="fab fa-instagram"></i> انستجرام</a>
+            <a href="https://facebook.com/TABO" class="btn facebook"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+            <a href="mailto:taponoor@gmail.com" class="btn email"><i class="fas fa-envelope"></i> البريد الإلكتروني</a>
+        </div>
+        <div class="contact-info" style="margin-top:20px;">
             <p>متاح للعمل في جميع أنحاء الكويت</p>
         </div>
     </div>
 
-    <div class="footer">
-        &copy; <span id="year"></span> م : تابو نور لبرمجة المواقع والتسويق الرقمي في الكويت. جميع الحقوق محفوظة.
+    <!-- ================= روابط سريعة للمقالات ================= -->
+    <div class="nav-blog">
+        <a href="#post-design">🖥️ تصميم مواقع</a>
+        <a href="#post-dev">⚙️ تطوير ويب</a>
+        <a href="#post-google">📢 إعلانات جوجل</a>
+        <a href="#post-seo">🔍 SEO</a>
+        <a href="#post-fb">📘 إعلانات فيسبوك</a>
+        <a href="#post-ig">📸 إعلانات إنستجرام</a>
+        <a href="#post-social">📱 إدارة سوشيال ميديا</a>
+        <a href="#post-cpc">💰 إعلان بالنقرة (PPC)</a>
+        <a href="#post-call">📞 إعلان اتصال مباشر</a>
+        <a href="#post-ads">📢 اعلانات - نظرة عامة</a>
     </div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- ================= بداية المقالات ================= -->
+
+    <!-- مقال: تصميم مواقع -->
+    <div id="post-design" class="blog-section">
+        <h2>🖥️ تصميم مواقع احترافية في الكويت</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 4 دقائق قراءة</div>
+        <p>تصميم المواقع هو أول انطباع يتركه نشاطك التجاري على العملاء. في عصر الرقمنة، أصبح الموقع الإلكتروني واجهة متجرك الرقمية التي تعمل 24 ساعة.</p>
+        <h3>ما هو تصميم المواقع الاحترافي؟</h3>
+        <p>لا يقتصر على الجمال فقط، بل يشمل سهولة الاستخدام (UX)، سرعة التحميل، التوافق مع الجوال (Responsive)، وتحفيز الزائر لاتخاذ إجراء مثل الاتصال أو الشراء.</p>
+        <h3>عناصر تصميم موقع ناجح في الكويت</h3>
+        <ul>
+            <li><strong>سرعة التحميل:</strong> 40% من الزوار يغادرون إذا تجاوزت 3 ثوانٍ.</li>
+            <li><strong>التوافق مع الجوال:</strong> أكثر من 70% من مستخدمي الكويت يتصفحون عبر هواتفهم.</li>
+            <li><strong>وضوح أزرار الحث على الإجراء (CTA):</strong> مثل "اتصل بنا" أو "احصل على عرض سعر".</li>
+            <li><strong>تحسين محركات البحث (SEO):</strong> تصميم صديق لجوجل يظهر في نتائج البحث.</li>
+        </ul>
+        <h3>تكلفة تصميم موقع في الكويت</h3>
+        <p>تبدأ من 150 دينار كويتي للمواقع التعريفية البسيطة، وقد تصل إلى آلاف الدنانير للمتاجر الإلكترونية المتكاملة. شركة تابو نور تقدم أسعارًا تنافسية وجودة عالية.</p>
+        <p><strong>لماذا تختار تابو نور؟</strong> نستخدم أحدث التقنيات (HTML5، CSS3، JavaScript)، ونضمن موقعًا سريعًا وآمنًا ومتوافقًا مع جميع الأجهزة، مع دعم مستمر بعد التسليم.</p>
+    </div>
+
+    <!-- مقال: تطوير ويب -->
+    <div id="post-dev" class="blog-section">
+        <h2>⚙️ تطوير ويب (Web Development)</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 5 دقائق قراءة</div>
+        <p>تطوير الويب هو عملية بناء وصيانة المواقع الإلكترونية. يشمل الجانب التقني الذي يجعل الموقع يعمل بشكل صحيح.</p>
+        <h3>الفرق بين تصميم المواقع وتطويرها</h3>
+        <p>المصمم (UI/UX Designer) يهتم بشكل الموقع وتجربة المستخدم، بينما المطور (Developer) يكتب الأكواد البرمجية (HTML، CSS، JavaScript، PHP، Python) لجعل التصميم حقيقة تفاعلية.</p>
+        <h3>أنواع تطوير الويب</h3>
+        <ul>
+            <li><strong>تطوير الواجهة الأمامية (Front-end):</strong> كل ما يراه المستخدم (HTML، CSS، JS).</li>
+            <li><strong>تطوير الخلفية (Back-end):</strong> الخوادم وقواعد البيانات (PHP، MySQL، Node.js).</li>
+            <li><strong>تطوير كامل المكدس (Full-stack):</strong> يجمع بين الأمامي والخلفي.</li>
+        </ul>
+        <h3>أهمية تطوير الويب للأعمال في الكويت</h3>
+        <p>موقع إلكتروني مطور بشكل احترافي يضمن لك: أمان بيانات العملاء، سرعة عالية، وقابلية للتوسع مع نمو أعمالك. فريق تطوير تابو نور يستخدم أحدث المعايير لتقديم مواقع متكاملة.</p>
+    </div>
+
+    <!-- مقال: إعلانات جوجل Google Ads -->
+    <div id="post-google" class="blog-section">
+        <h2>📢 إعلانات جوجل (Google Ads) - الدليل الشامل</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 6 دقائق قراءة</div>
+        <p>إعلانات جوجل (Google Ads) هي نظام إعلاني من جوجل يسمح لك بعرض إعلاناتك في نتائج البحث، مواقع الويب الشريكة، ويوتيوب، بنظام الدفع مقابل النقرة (PPC).</p>
+        <h3>أنواع حملات Google Ads</h3>
+        <ul>
+            <li><strong>حملات البحث (Search):</strong> تظهر إعلانات نصية عند البحث عن كلمات معينة.</li>
+            <li><strong>حملات العرض (Display):</strong> صور وفيديوهات على ملايين المواقع والتطبيقات.</li>
+            <li><strong>حملات الفيديو (YouTube):</strong> إعلانات قبل أو أثناء مقاطع اليوتيوب.</li>
+            <li><strong>حملات التسوق (Shopping):</strong> للمتاجر الإلكترونية لعرض المنتجات.</li>
+            <li><strong>حملات الاتصال (Call Ads):</strong> تظهر رقم هاتفك مباشرة في الإعلان.</li>
+        </ul>
+        <h3>كيف تنجح في Google Ads بالكويت؟</h3>
+        <p>اختيار الكلمات المفتاحية المناسبة، كتابة إعلانات جذابة، تحديد الجمهور بدقة (موقعياً، سكانياً)، وتحسين الصفحة المقصودة (Landing Page). شركة تابو نور تدير حملات Google Ads بكفاءة لتحقيق أعلى عائد استثماري.</p>
+    </div>
+
+    <!-- مقال: SEO -->
+    <div id="post-seo" class="blog-section">
+        <h2>🔍 SEO (تحسين محركات البحث) - وصول مجاني ومستدام</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 5 دقائق قراءة</div>
+        <p>SEO اختصار لـ Search Engine Optimization، ويعني تحسين موقعك ليظهر في الصفحات الأولى لمحركات البحث (خاصة جوجل) مجانًا، دون دفع مقابل كل نقرة.</p>
+        <h3>عناصر الـ SEO الأساسية</h3>
+        <ul>
+            <li><strong>SEO الداخلي (On-Page):</strong> تحسين العناوين، المحتوى، الروابط الداخلية، وسرعة الموقع.</li>
+            <li><strong>SEO الخارجي (Off-Page):</strong> بناء روابط خارجية (Backlinks) من مواقع موثوقة.</li>
+            <li><strong>SEO التقني (Technical):</strong> تحسين هيكل الموقع، ملف Sitemap، وجعل الموقع مناسبًا للزحف.</li>
+        </ul>
+        <h3>فوائد SEO للأعمال في الكويت</h3>
+        <p>جذب زوار حقيقيين يبحثون عن خدماتك، بناء ثقة وعلامة تجارية، وتوفير تكاليف الإعلانات على المدى الطويل. فريق تابو نور يقدم استراتيجيات SEO مخصصة للسوق الكويتي.</p>
+    </div>
+
+    <!-- مقال: إعلانات فيسبوك -->
+    <div id="post-fb" class="blog-section">
+        <h2>📘 إعلانات فيسبوك - استهداف دقيق لجمهورك</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 4 دقائق قراءة</div>
+        <p>إعلانات فيسبوك تتيح لك الوصول إلى أكثر من 2.9 مليار مستخدم نشط شهريًا، مع خيارات استهداف دقيقة جدًا (العمر، الموقع، الاهتمامات، السلوك).</p>
+        <h3>أهداف إعلانات فيسبوك</h3>
+        <ul>
+            <li>الوعي بالعلامة التجارية (Awareness)</li>
+            <li>جذب زيارات للموقع (Traffic)</li>
+            <li>جذب تفاعلات (مشاركات، إعجابات، تعليقات)</li>
+            <li>توليد عملاء محتملين (Leads)</li>
+            <li>زيادة المبيعات (Conversions)</li>
+        </ul>
+        <h3>نصائح لحملات فيسبوك ناجحة في الكويت</h3>
+        <p>استخدم صور وفيديوهات عالية الجودة، اكتب نصوص إعلانية قصيرة وواضحة، حدد الجمهور المستهدف بدقة (مثلاً: الكويت، عمر 25-45، مهتم بالتسويق الرقمي)، واختبر أكثر من إعلان. شركة تابو نور تدير حملات فيسبوك احترافية بأسعار تنافسية.</p>
+    </div>
+
+    <!-- مقال: إعلانات إنستجرام -->
+    <div id="post-ig" class="blog-section">
+        <h2>📸 إعلانات إنستجرام - جاذبية بصرية لا تُقاوم</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 4 دقائق قراءة</div>
+        <p>إنستجرام هو منصة بصرية مثالية للعلامات التجارية التي تعتمد على الصور والفيديوهات، خاصة في الكويت حيث نسبة انتشار التطبيق مرتفعة جدًا بين الشباب.</p>
+        <h3>أنواع إعلانات إنستجرام</h3>
+        <ul>
+            <li>إعلانات الصورة الواحدة</li>
+            <li>إعلانات الفيديو القصير (Reels)</li>
+            <li>إعلانات القصص (Stories)</li>
+            <li>إعلانات التسوق (Shopping)</li>
+            <li>إعلانات الكاروسيل (صور متعددة قابلة للتمرير)</li>
+        </ul>
+        <p>إعلانات إنستجرام تدار عبر نفس منصة Meta Ads Manager الخاصة بفيسبوك. يمكنك استهداف الجمهور نفسه، والتحكم في الميزانية بشكل يومي. تابعو نور تقدم تصاميم إعلانات جذابة وحملات مُدارة بالكامل لتحقيق أقصى عائد.</p>
+    </div>
+
+    <!-- مقال: إدارة سوشيال ميديا -->
+    <div id="post-social" class="blog-section">
+        <h2>📱 إدارة سوشيال ميديا - لبناء علامة تجارية قوية</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 4 دقائق قراءة</div>
+        <p>إدارة السوشيال ميديا تشمل إنشاء المحتوى، جدولة المنشورات، الرد على العملاء، وتحليل النتائج عبر منصات مثل فيسبوك، إنستجرام، تويتر، لينكد إن، وتيك توك.</p>
+        <h3>ماذا تشمل خدمات إدارة السوشيال ميديا من تابو نور؟</h3>
+        <ul>
+            <li>استراتيجية محتوى شهرية مخصصة لجمهورك.</li>
+            <li>تصميم بوستات وفيديوهات قصيرة احترافية.</li>
+            <li>جدولة المنشورات في أوقات الذروة.</li>
+            <li>إدارة الإعلانات المدفوعة على المنصات المختلفة.</li>
+            <li>تقرير شهري بالأداء والنتائج (المتابعون، التفاعل، الوصول).</li>
+        </ul>
+        <p>خدماتنا تشمل أيضًا إدارة حسابات المشاهير والمؤثرين لزيادة تفاعل جمهورهم وتحقيق عقود رعاية أفضل.</p>
+    </div>
+
+    <!-- مقال: إعلان بالنقرة PPC -->
+    <div id="post-cpc" class="blog-section">
+        <h2>💰 إعلان بالنقرة (PPC) - ادفع فقط عند النقر</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 3 دقائق قراءة</div>
+        <p>PPC اختصار لـ Pay Per Click، وهو نموذج إعلاني تدفع فيه فقط عندما يضغط أحدهم على إعلانك. أشهر منصات PPC هي Google Ads و Bing Ads ومنصات التواصل الاجتماعي.</p>
+        <h3>مميزات إعلانات الدفع بالنقرة</h3>
+        <ul>
+            <li><strong>التحكم في التكلفة:</strong> تضع حدًا أقصى للنقرة أو الميزانية اليومية.</li>
+            <li><strong>نتائج فورية:</strong> بمجرد تشغيل الحملة، يبدأ الزوار في الوصول.</li>
+            <li><strong>استهداف دقيق:</strong> تختار من يرى إعلانك بالضبط.</li>
+            <li><strong>قياس العائد (ROI):</strong> يمكنك تتبع كل ريال أنفقته وكل عملية بيع تمت.</li>
+        </ul>
+        <p>في تابو نور، نُحسّن حملات PPC لتخفيض تكلفة النقرة وزيادة نسبة التحويل (مكالمات، مشتريات، أو تواصل).</p>
+    </div>
+
+    <!-- مقال: إعلان اتصال مباشر -->
+    <div id="post-call" class="blog-section">
+        <h2>📞 إعلان اتصال مباشر (Call Ads) - المكالمات الهاتفية الفورية</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 3 دقائق قراءة</div>
+        <p>إعلانات الاتصال المباشر هي نوع خاص من إعلانات Google وفيسبوك تظهر رقم هاتفك بشكل بارز، وتتيح للعميل الاتصال بك بنقرة واحدة من الهاتف المحمول.</p>
+        <h3>لمن تناسب إعلانات الاتصال المباشر؟</h3>
+        <ul>
+            <li>المطاعم ومحلات التوصيل</li>
+            <li>مراكز الخدمات الطبية والتجميلية</li>
+            <li>شركات المقاولات والخدمات المنزلية</li>
+            <li>مكاتب المحاماة والاستشارات</li>
+            <li>وكالات السفر والسياحة</li>
+        </ul>
+        <h3>كيف تعمل مع تابو نور؟</h3>
+        <p>نقوم بإعداد حملات Call Ads مستهدفة بالأحياء القريبة من مقر عملك في الكويت، ونستخدم كلمات مفتاحية مثل "سباك حولي" أو "دكتور أسنان الفروانية" لتظهر إعلانك مع زر الاتصال مباشرة. أنت لا تدفع إلا مقابل المكالمات الفعلية (أو النقرات حسب اختيارك).</p>
+    </div>
+
+    <!-- مقال: اعلانات - نظرة عامة -->
+    <div id="post-ads" class="blog-section">
+        <h2>📢 اعلانات رقمية: دليلك الشامل للتسويق الإلكتروني في الكويت</h2>
+        <div class="blog-meta">📅 7 يونيو 2025 | ⏱️ 5 دقائق قراءة</div>
+        <p>الإعلانات الرقمية تشمل جميع أشكال الإعلانات على الإنترنت: محركات البحث (جوجل)، وسائل التواصل (فيسبوك، إنستجرام، تويتر، تيك توك)، البريد الإلكتروني، والإعلانات على المواقع والتطبيقات (Display).</p>
+        <h3>أنواع الإعلانات الرقمية التي نقدمها في تابو نور</h3>
+        <ul>
+            <li><strong>إعلانات البحث:</strong> تظهر للباحثين عن خدمتك بالضبط.</li>
+            <li><strong>إعلانات العرض (بانر):</strong> صور وفيديوهات على آلاف المواقع.</li>
+            <li><strong>إعلانات الفيديو:</strong> على يوتيوب وإنستجرام ريلز وتيك توك.</li>
+            <li><strong>إعلانات إعادة الاستهداف (Retargeting):</strong> تظهر لمن زار موقعك بالفعل.</li>
+        </ul>
+        <p>نقدم استشارة مجانية لتحديد أفضل نوع إعلان يناسب نشاطك وميزانيتك، ثم ندير الحملة من الألف إلى الياء مع تقارير دورية.</p>
+    </div>
+
+    <!-- نهاية المقالات -->
+    
+    <div class="footer">
+        &copy; <span id="year"></span> تابو نور لبرمجة المواقع والتسويق الرقمي في الكويت. جميع الحقوق محفوظة.
+        <br><br>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color:#FFD700; text-decoration:none;">▲ العودة للأعلى</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
